@@ -5,7 +5,7 @@ import threading
 class Chat_Server():
 
     def __init__(self,setPort,setChunk, setChannels, setRate):
-        self.Host = socket.gethostname()
+        self.Host = socket.gethostbyname(socket.gethostname())
         self.Port = setPort
         self.Address = f"{self.Host} : {self.Port}"
         self.audio = pyaudio.PyAudio()
